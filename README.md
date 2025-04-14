@@ -21,7 +21,18 @@ Deze app is ontwikkeld als leerproject om te werken met:
 ## Installatie en starten
 
 1. Clone de repo:
-   ```bash
+  ```bash
    git clone https://github.com/wouteruffen/SPA-Auth0-React.git
 
    ```
+
+   ```bash
+    npm i @auth0/auth0-react
+
+   ```
+   
+      ```bash
+    npm start
+
+   ```
+   
