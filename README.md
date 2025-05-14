@@ -31,7 +31,7 @@ Deze app is ontwikkeld als leerproject om te werken met:
 
    ```
    
-      ```bash
+   bash
     npm start
 
    ```
