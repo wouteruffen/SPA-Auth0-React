@@ -4,6 +4,7 @@ import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import Header from "./components/Header"; // <-- importeer je Header
 import { useAuth0 } from "@auth0/auth0-react";
+import FirebaseData from "./components/FirebaseData";
 
 function App() {
   const { isLoading, error } = useAuth0();
@@ -23,6 +24,9 @@ function App() {
             <LoginButton />
             {/* <LogoutButton /> */}
             <Profile />
+            <main className="column">
+             <FirebaseData />
+            </main>
           </>
         )}
       </main>
