@@ -6,107 +6,69 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   font-family: 'Nunito', sans-serif;
-}
-
-main {
-  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #111;
   min-height: 100vh;
 }
 
-article {
-  font-size: 1.2rem;
-  width: 90%;
-  margin: 1rem;
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-button {
-  margin: 1rem 1rem 0.5rem;
-  font: inherit;
-  font-size: 3rem;
-  padding: 0.5em 1.5em;
-  cursor: pointer;
-  border-radius: 0.5rem;
-}
-
-img {
-    width: 200px;
-    border: 0.5rem double #000;
-    border-radius: 50%;
-    margin: 0 1rem 1rem;
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  padding: 2rem;
 }
 
-
-
-
-/* test */ 
-
-.navbar {
-  background-color: #ffffff;
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+button {
+  font: inherit;
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
 }
 
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #0077cc;
-}
-
-.auth-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-
-/* Header */ 
-
+/* HEADER */
 .header {
-  background-color: #ffffff;
-  padding: 10px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  height: 70px; /* Zorg voor vaste hoogte */
+  height: 70px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 .user-info {
   display: flex;
-  align-items: center; /* Zorgt dat foto + tekst + pijltje verticaal gecentreerd zijn */
+  align-items: center;
   gap: 8px;
   cursor: pointer;
   padding: 5px;
 }
+
 .user-info svg {
   margin-left: 4px;
-  align-self: center;
 }
-
 
 .user-pic {
   width: 36px;
@@ -116,50 +78,35 @@ nav a:hover {
 }
 
 .user-name {
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
 }
 
-
-/* Dropdown */
+/* DROPDOWN */
 .dropdown-menu {
   position: absolute;
   top: 70px;
   right: 30px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 10px;
   z-index: 1000;
-  width: auto; /* <-- maak de breedte automatisch */
-  min-width: 180px; /* <-- eventueel een minimum zodat het niet te smal wordt */
-  white-space: nowrap; /* <-- voorkom dat emailadres wordt afgebroken */
-}
-
-
-.dropdown-item {
-  margin-bottom: 10px;
+  min-width: 200px;
 }
 
 .dropdown-item p {
   margin: 5px 0;
-  color: #666;
-}
-
-hr {
-  margin: 10px 0;
-  border: none;
-  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
 }
 
 .dropdown-menu button {
   width: 100%;
-  padding: 8px 10px;
-  font-size: 14px;
-  background-color: transparent;
-  border: none;
   text-align: left;
-  color: #333;
+  padding: 8px 12px;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -167,22 +114,19 @@ hr {
   background-color: #f5f5f5;
 }
 
-/* Nieuwe Profile */ 
-
+/* PROFILE */
 .profile-page {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
+  margin-top: 40px;
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
 }
 
 .profile-avatar {
@@ -193,102 +137,416 @@ hr {
 }
 
 .profile-header-info h2 {
-  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
-.profile-role, .profile-location {
-  color: #777;
+.profile-role,
+.profile-location {
   font-size: 14px;
-  margin-top: 4px;
+  color: #777;
 }
 
 .profile-section {
   background: #fff;
-  margin-top: 20px;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .profile-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .edit-btn {
-  background-color: #f0f2f5;
+  background-color: #eef1f5;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 }
 
 .profile-info-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
 .label {
-  font-weight: bold;
-  font-size: 13px;
-  margin-bottom: 4px;
-  color: #555;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
 }
 
-/* Edit Modal */ 
-
-
+/* MODAL */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.3);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.modal-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  width: 500px;
-  max-width: 90%;
+.modal {
+  background: white;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.4s ease-out forwards;
 }
 
-.form-grid {
-  display: grid;
-  gap: 10px;
+.modal-exit {
+  animation: fadeOutScale 0.3s ease-out forwards;
 }
 
-.form-grid input {
-  padding: 8px;
-  border: 1px solid #ccc;
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  font-size: 1rem;
   border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .modal-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 0.75rem;
 }
 
-.save-btn {
+.btn.primary {
   background-color: #3b82f6;
   color: white;
-  border: none;
-  padding: 8px 16px;
+}
+
+.btn.secondary {
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+/* SUCCESS MESSAGE */
+.success-message {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 1rem 2rem;
   border-radius: 6px;
-  cursor: pointer;
+  font-weight: 500;
+  z-index: 1000;
+  opacity: 0;
+  animation: slideDownFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes slideDownFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 
+/* === FORMULIERSECTIES MET GRID === */
 
+.form-section {
+  margin-top: 2rem;
+}
+
+.form-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.form-group input {
+  background: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #f0f8ff;
+}
+
+/* Foutmelding */
+.input-error {
+  border-color: #dc3545;
+  background-color: #fff0f0;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+/* Verbeterde styling voor profielinformatie met secties */
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  margin-top: 1rem;
+}
+
+.profile-info-grid h4 {
+  grid-column: span 2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.4rem;
+}
+
+.profile-info-grid .label {
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+}
+
+.profile-info-grid p {
+  margin: 0 0 1rem;
+  font-size: 14px;
+  color: #111;
+}
+
+.profile-info-subsection {
+  margin-bottom: 2rem;
+}
+
+.profile-info-subsection h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; /* lichtgrijs */
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6; /* blauw randje bij focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151; /* donkergrijs zoals Tailwind's gray-700 */
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.form-group input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; /* grijs randje */
+  background-color: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6; /* blauw randje bij focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* subtiele blauwe glow */
+}
+.form-group input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db; /* zachte grijze rand */
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.profile-display-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.block-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.profile-display-box {
+  padding: 0.65rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #111827;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+/* --- INPUT FIELDS IN MODAL --- */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.65rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  transition: border 0.2s ease-in-out;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+/* Buttons in modal */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal h4 {
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  color: #111;
+}
+.modal {
+  background: white;
+  padding: 2rem;
+  width: 90vw;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 0.4s ease-out forwards;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.form-group select {
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  transition: border 0.2s ease-in-out;
+  box-shadow: 0 0 0 2px transparent;
+  appearance: none; /* verwijdert standaard styling (zoals pijltje in Chrome) */
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.form-group select.input-error {
+  border-color: #dc3545;
+  background-color: #fff0f0;
+}
+.input-error {
+  border-color: #dc3545 !important;
+  background-color: #fff0f0;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}

@@ -5,6 +5,13 @@ import Profile from "./components/Profile";
 import Header from "./components/Header"; // <-- importeer je Header
 import { useAuth0 } from "@auth0/auth0-react";
 import FirebaseData from "./components/FirebaseData";
+import MessagesList from "./components/MessagesList";
+import React from 'react';
+
+
+
+
+
 
 function App() {
   const { isLoading, error } = useAuth0();
@@ -26,6 +33,8 @@ function App() {
             <Profile />
             <main className="column">
              <FirebaseData />
+              {/*  <MessagesList /> */}
+
             </main>
           </>
         )}
@@ -36,5 +45,4 @@ function App() {
 
 
 export default App;
-
 

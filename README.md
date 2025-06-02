@@ -22,8 +22,10 @@ Deze app is ontwikkeld als leerproject om te werken met:
 
 1. Clone de repo:
 
-   git clone https://github.com/wouteruffen/SPA-Auth0-React.git
+    git clone https://github.com/wouteruffen/SPA-Auth0-React.git
     npm i @auth0/auth0-react
     npm i firebase
+    npm install -g kill-port
+    npm install libphonenumber-js
     npm start
    

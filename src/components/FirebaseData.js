@@ -10,25 +10,35 @@ export default function FirebaseData() {
         e.preventDefault();
         console.log(messageRef.current.value);
 
-        let data = {
-            message:messageRef.current.value,
+    let data = {
+        message: messageRef.current.value,
+        timestamp: new Date(),
+    };
+
+
+      try {
+         await addDoc(ref, data);
+             console.log("✔️ Bericht opgeslagen");
+        }    catch (e) {
+             console.error("❌ Fout bij opslaan:", e);
         }
 
-        try {
-            addDoc(ref, data);
-        } catch (e) {
-            console.log(e);
-        }
 
 
     };
+
+
+
+
+    
     return (
-        <div>
+        <div>{/*}
             <form onSubmit={handleSave}>
                 <label>Enter Message</label>
                 <input type="text" ref={messageRef} />
                 <button type="submit">Save</button>
             </form>
+            */}
         </div>
     );
 }
