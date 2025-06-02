@@ -166,4 +166,4 @@ const validate = () => {
   );
 };
 
-export default EditModa
+export default EditModal
